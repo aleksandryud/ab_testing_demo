@@ -18,6 +18,9 @@ function App() {
         value: elapsedSeconds,
       });
     }
+    if (typeof window !== 'undefined' && typeof window.hj === 'function') {
+      window.hj("event", "Button A Clicked", { elapsedTime: elapsedSeconds });
+    }
   };
 
   const handleClickB = () => {
@@ -29,6 +32,9 @@ function App() {
         event_label: "Variant B",
         value: elapsedSeconds,
       });
+    }
+    if (typeof window !== 'undefined' && typeof window.hj === 'function') {
+      window.hj("event", "Button B Clicked", { elapsedTime: elapsedSeconds });
     }
   };
 
